@@ -74,6 +74,9 @@ export default {
   width: 1.36rem;
   font-size: 14px;
 }
+input {
+       font-size: 14px;
+    }
 .login {
   width: 100%;
   height: 0.8rem;
@@ -87,15 +90,10 @@ export default {
   margin-bottom: 0.2rem;
 }
 .problem {
-  width: 100%;
-  height: 0.44rem;
   display: flex;
   justify-content: space-between;
 }
 .problem span {
-  width: 1.2rem;
-  height: 0.44rem;
-  line-height: 0.44rem;
   text-align: center;
   font-size: 0.24rem;
   color: #1e853c;
