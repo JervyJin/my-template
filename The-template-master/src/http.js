@@ -10,11 +10,14 @@ console.log(config)
 const http = axios.create({
   baseURL: config.api_base,
   timeout: 15000,
+  headers: {
+    // 'Content-Type': 'application/x-www-form-urlencoded'
+    'Content-Type': 'application/json',
+  },
   transformRequest: [
     function(data, headers) {
       data = data || {}
       data = qs.stringify(data)
-      headers['Authorization'] = getToken()
       return data
     }
   ]
@@ -23,6 +26,7 @@ const http = axios.create({
 // request拦截器
 http.interceptors.request.use(config => {
   config.data = config.data ? config.data : {}
+  config.headers["authorization"] = store.state.token; //把token添加到请求头每次请求接口时候带上
   if (router.currentRoute && router.currentRoute.meta.requiresAuth) {
     if (getToken() === '') {
       return Promise.reject('请登录后操作')

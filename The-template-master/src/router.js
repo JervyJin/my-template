@@ -27,6 +27,15 @@ let router = new Router({
       meta: {
         requiresAuth: false
       }
+    },
+    {
+      path: '/agreement',
+      name: 'agreement',
+      component: () =>
+        import(/* webpackChunkName: "agreement" */ './components/register/agreement'),
+      meta: {
+        requiresAuth: false
+      }
     }
   ]
 })

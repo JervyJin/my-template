@@ -72,7 +72,7 @@ export default {
   font-weight: 500;
   display: inline-block;
   width: 1.36rem;
-  font-size: 0.28rem;
+  font-size: 14px;
 }
 .login {
   width: 100%;

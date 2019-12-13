@@ -18,6 +18,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import '@/assets/js/share'
 import '@/assets/js/share1'
+import 'amfe-flexible/index.js' //用于设置 rem 基准值
 Vue.use(VueAwesomeSwiper)
 Vue.prototype.http = http
 // 注册全局过滤器
@@ -119,3 +120,5 @@ if (
     render: h => h(App)
   }).$mount('#app')
 }
+
+
