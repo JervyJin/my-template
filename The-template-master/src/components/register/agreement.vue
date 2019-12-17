@@ -5,10 +5,19 @@
     <van-button type="primary" size="large" @click="show_dialog">大号按钮</van-button>
     <!-- 测试引入本地阿里图标库 -->
     <i class="iconfont iconkeyibaoyunhuiyuanicon-155"></i>
+    <!-- 测试 使用dayjs结合filter过滤器格式化日期 -->
+    <span>{{nowDate|formatDate}}</span>
   </div>
 </template>
 <script>
+// import dayjs from "dayjs";
 export default {
+  data() {
+    return {
+      nowDate: new Date()
+      // nowDate: dayjs(new Date()).format("YYYY-MM-DD")
+    };
+  },
   methods: {
     show_dialog() {
       this.$dialog.alert({

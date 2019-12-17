@@ -9,7 +9,7 @@ import Toasted from 'vue-toasted'
 import { checkUpdate } from '@/update'
 import http from './http'
 import FastClick from 'fastclick' //使用 fastclick 解决移动端 300ms 点击延迟
-import filters from './filters' //将全部过滤器放在 filters/index.js 中便于管理
+import filters from './filters/index' //将全部过滤器放在 filters/index.js 中便于管理
 //技巧 同时 use 多个插件 被依赖的插件应放在偏后方
 import '@/assets/js/protocol'
 import '@/assets/js/nano-websocket-client'
